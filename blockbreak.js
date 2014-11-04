@@ -123,7 +123,7 @@ $(function() {
         x: 0, y: 0, fill: "rgba(50,255,0,1)"
         }));
       
-      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
+      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#ffffff",
       												 label: "score: "}));
       	
       stage.insert(new Q.Paddle());
