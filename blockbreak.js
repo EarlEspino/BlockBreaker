@@ -127,8 +127,8 @@ $(function() {
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
-        for(var y=25;y<5;y++) {
-          stage.insert(new Q.Block({ x: x*50+35, y: y*30+10 }));
+        for(var y=0;y<5;y++) {
+          stage.insert(new Q.Block({ x: x*50+35, y: y*30+50 }));
           blockCount++;
         }
       }
