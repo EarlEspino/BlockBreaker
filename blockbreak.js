@@ -108,18 +108,18 @@ $(function() {
   });
 
 //  Q.load(['blockbreak.png','blockbreak.json'], function() {
-  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3'], function() {
-    // Q.compileSheets('blockbreak.png','blockbreak.json');  
-	Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
+  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3', 'blockbreak.json'], function() {
+    Q.compileSheets('blockbreak.png','blockbreak.json');  
+	/**Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
 	Q.sheet("block", "blockbreak.png", { tilew: 40, tileh: 20, sy: 20, sx: 0 });
-	Q.sheet("paddle", "blockbreak.png", { tilew: 60, tileh: 20, sy: 40, sx: 0 });		 		 
+	Q.sheet("paddle", "blockbreak.png", { tilew: 60, tileh: 20, sy: 40, sx: 0 });	**/	 		 
     
     
      //game scene
     Q.scene('game',new Q.Scene(function(stage) {
       var score = 0;
       var scoreBoard = stage.insert(new Q.UI.Text( { size:15 ,x:0, y:0, fill: "#999999",
-      												 label: "score: ".concat(score)}));
+      												 label: ""}));
       	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
