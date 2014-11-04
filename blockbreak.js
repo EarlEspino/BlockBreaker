@@ -81,7 +81,7 @@ $(function() {
 	collision: function(col) {                // collision method
 		if (col.obj.isA("Paddle")) {
 //			alert("collision with paddle");
-			Q.audio.play('paddleHit.wav');
+			Q.audio.play('paddleHit');
 			this.p.dy = -1;
 		} else if (col.obj.isA("Block")) {
 //			alert("collision with block");
@@ -104,7 +104,7 @@ $(function() {
   });
 
 //  Q.load(['blockbreak.png','blockbreak.json'], function() {
-  Q.load(['blockbreak.png','paddleHit.wav'], function() {
+  Q.load(['blockbreak.png','paddleHit'], function() {
     // Q.compileSheets('blockbreak.png','blockbreak.json');  
 	Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
 	Q.sheet("block", "blockbreak.png", { tilew: 40, tileh: 20, sy: 20, sx: 0 });
