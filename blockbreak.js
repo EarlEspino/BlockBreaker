@@ -60,14 +60,17 @@ $(function() {
 		  p.y += p.dy * p.speed * dt;
 
 		  if(p.x < 0) { 
+		  	Q.audio.play('wallHit.mp3');
 			p.x = 0;
 			p.dx = 1;
 		  } else if(p.x > Q.width - 2) { 
+		  	Q.audio.play('wallHit.mp3');
 			p.dx = -1;
 			p.x = Q.width - 2;
 		  }
 
 		  if(p.y < 0) {
+		  	Q.audio.play('wallHit.mp3');
 			p.y = 0;
 			p.dy = 1;
 		  } else if(p.y > Q.height) { //LOSE GAME
@@ -105,7 +108,7 @@ $(function() {
   });
 
 //  Q.load(['blockbreak.png','blockbreak.json'], function() {
-  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3'], function() {
+  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3'], function() {
     // Q.compileSheets('blockbreak.png','blockbreak.json');  
 	Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
 	Q.sheet("block", "blockbreak.png", { tilew: 40, tileh: 20, sy: 20, sx: 0 });
