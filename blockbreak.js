@@ -118,7 +118,8 @@ $(function() {
      //game scene
     Q.scene('game',new Q.Scene(function(stage) {
       var score = 0;
-      var scoreBoard = stage.insert(new Q.UI.Text( { size:15 ,x:50, y:50, fill: "#999999",
+      
+      stage.insert(new Q.UI.Text( { size:15 ,x:50, y:50, fill: "#999999",
       												 label: "score: "}));
       	
       stage.insert(new Q.Paddle());
