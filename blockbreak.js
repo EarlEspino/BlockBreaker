@@ -119,7 +119,11 @@ $(function() {
     Q.scene('game',new Q.Scene(function(stage) {
       var score = 0;
       
-      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
+      var container = stage.insert(new Q.UI.Container({
+        x: 0, y: 0, fill: "rgba(50,255,0,1)"
+        }));
+      
+      container.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
       												 label: "score: "}));
       	
       stage.insert(new Q.Paddle());
