@@ -123,7 +123,7 @@ $(function() {
         x: 0, y: 0, fill: "rgba(50,255,0,1)"
         }));
       
-      container.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
+      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
       												 label: "score: "}));
       	
       stage.insert(new Q.Paddle());
@@ -155,7 +155,9 @@ $(function() {
     //start screen
      Q.scene('startScreen', new Q.Scene(function(stage) {
        
-    
+      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
+      												 label: "score: "}));
+      	
     
       var container = stage.insert(new Q.UI.Container({
         x: Q.width/2-3, y: Q.height/2, fill: "rgba(255,255,255,1)"
