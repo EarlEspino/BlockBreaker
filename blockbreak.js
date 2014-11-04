@@ -119,7 +119,7 @@ $(function() {
     Q.scene('game',new Q.Scene(function(stage) {
       var score = 0;
       var scoreBoard = stage.insert(new Q.UI.Text( { size:15 ,x:0, y:0, fill: "#999999",
-      												 label: ""}));
+      												 label: "score: "}));
       	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
