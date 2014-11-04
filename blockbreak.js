@@ -175,7 +175,7 @@ $(function() {
                                            
       buttonPlay.on('click',function() { 
         Q.clearStages();
-        Q.stageScene('game', 1); 
+        Q.stageScene('game'); 
       });                                
                                            
       container.fit(20);
