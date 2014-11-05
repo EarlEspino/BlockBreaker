@@ -130,7 +130,7 @@ $(function() {
       var paddle = stage.insert(new Q.Paddle());
       var ball = stage.insert(new Q.Ball());
       
-      stage.insert(new Q.UI.Text( { label: "score: ", fill: '#FFFFFF', x:50, y:50,  size:12 } ));
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,0)', x:50, y:50,  size:12 } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -180,7 +180,7 @@ $(function() {
                                         
       
       
-      container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
+      container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, size: 16, align: "center",
                                            label: "Use left and right arrow keys\n to move paddle" }));
                                            
       buttonPlay.on('click',function() { 
