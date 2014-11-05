@@ -144,6 +144,8 @@ if(ball.p.y > Q.height){
         		Q.stageScene('loseGame');
         	} else {
         		lives--;
+        		ball.destroy();
+        		ball = stage.insert(new Q.Ball());
         	}
         }
         
