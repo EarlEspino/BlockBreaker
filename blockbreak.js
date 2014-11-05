@@ -10,6 +10,7 @@ $(function() {
             controls:  [ ['left','<' ],[],[],[],['right','>' ] ]
   });
 
+  //paddle
   Q.Sprite.extend("Paddle", {     // extend Sprite class to create Q.Paddle subclass
     init: function(p) {
       this._super(p, {
@@ -39,6 +40,7 @@ $(function() {
     }
   });
 
+  //ball
   Q.Sprite.extend("Ball", {
     init: function() {
       this._super({
@@ -96,6 +98,8 @@ $(function() {
 	}
   });
 
+
+  //block
   Q.Sprite.extend("Block", {
     init: function(props) {
       this._super(_(props).extend({ sheet: 'block'}));
@@ -119,17 +123,16 @@ $(function() {
     Q.scene('game',new Q.Scene(function(stage) {
       var score = 0;
       
-      var container = stage.insert(new Q.UI.Container({
+      /*var container = stage.insert(new Q.UI.Container({
         x: 0, y: 0, fill: "rgba(50,255,0,1)"
-        }));
+        }));*/
       
-      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#ffffff",
-      												 label: "score: "}));
+      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#ffffff", label: "score: "}));
       	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
       
-
+/*
       var blockCount=0;
       for(var x=0;x<6;x++) {
         for(var y=0;y<5;y++) {
@@ -147,6 +150,10 @@ $(function() {
         
         
       });
+      
+      
+      */
+      
       }));
     
     
@@ -155,8 +162,7 @@ $(function() {
     //start screen
      Q.scene('startScreen', new Q.Scene(function(stage) {
        
-      stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",
-      												 label: "score: "}));
+      //stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",label: "score: "}));
       	
     
       var container = stage.insert(new Q.UI.Container({
