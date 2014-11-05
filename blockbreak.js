@@ -139,9 +139,10 @@ $(function() {
 	  var livesBoard = stage.insert(new Q.UI.Text( { label: "lives: ".concat(lives), color: 'white', x:Q.width - 35, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 
 	  if(ball.p.y > Q.height){
-        	lives--;
-        		ball.obj.destroy();
-        		ball = stage.insert(new Q.Ball());
+        lives--;
+        lives
+        ball.destroy();
+        ball = stage.insert(new Q.Ball());
         	
         	if(lives == 0){
         		Q.clearStages();
