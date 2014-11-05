@@ -140,7 +140,7 @@ $(function() {
 
 	  if(ball.p.y > Q.height){
         	lives--;
-        		ball.destroy();
+        		ball.obj.destroy();
         		ball = stage.insert(new Q.Ball());
         	
         	if(lives == 0){
