@@ -138,7 +138,15 @@ $(function() {
       var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 	  var livesBoard = stage.insert(new Q.UI.Text( { label: "lives: ".concat(lives), color: 'white', x:Q.width - 35, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 
-
+if(ball.p.y > Q.height){
+        	if(lives == 0){
+        		Q.clearStages()
+        		Q.stageScene('loseGame');
+        	} else {
+        		lives--;
+        	}
+        }
+        
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -161,14 +169,6 @@ $(function() {
           Q.stageScene('winGame');
         }
         
-        if(ball.p.y > Q.height){
-        	if(lives == 0){
-        		Q.clearStages()
-        		Q.stageScene('loseGame');
-        	} else {
-        		lives--;
-        	}
-        }
         
        
         
