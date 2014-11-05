@@ -76,8 +76,8 @@ $(function() {
 			p.y = 0;
 			p.dy = 1;
 		  } else if(p.y > Q.height) { //LOSE GAME
-			/*Q.clearStages();
-			Q.stageScene('loseGame');*/
+			Q.clearStages();
+			Q.stageScene('loseGame');
 			
 		  }
 	  });
@@ -150,8 +150,7 @@ $(function() {
         }
         if(ball.p.y > Q.height){
         	
-        	Q.clearStages();
-			Q.stageScene('loseGame');
+        	
         }
         
         
