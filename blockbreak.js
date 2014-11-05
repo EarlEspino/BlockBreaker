@@ -166,7 +166,9 @@ $(function() {
       //var score = 0;
       //var lives = 3; //start with 3 lives
       
-     
+     var container = stage.insert(new Q.UI.Container({
+        x: Q.width/2-3, y: Q.height/2, fill: "rgba(255,255,255,1)"
+        }));
       
       stage.insert(new Q.UI.Text( { label: "score: ", fill: 'white', 
       x:50, y:50,  size:12 } ));
