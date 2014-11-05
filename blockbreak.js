@@ -183,7 +183,7 @@ $(function() {
                                         
       
       
-      var instruct = container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
+      container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
                                            label: "Use left and right arrow keys\n to move paddle" }));
                                            
       buttonPlay.on('click',function() { 
@@ -212,8 +212,8 @@ $(function() {
                                         
       
       
-      //var instruct = container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
-                                           //label: "Use left and right arrow keys\n to move paddle" }));
+      var instruct = container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
+                                           label: "Well done!" }));
                                            
       buttonPlay.on('click',function() { 
         Q.clearStages();
@@ -242,12 +242,12 @@ $(function() {
                                         
       
       
-      //var instruct = container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
-                                           //label: "Use left and right arrow keys\n to move paddle" }));
+      var instruct = container.insert(new Q.UI.Text({ x: 0, y: 10 + buttonPlay.p.h, fill: "#FFFFFF", size: 16, align: "center",
+                                           label: "Hit the ball with the paddle!" }));
                                            
       buttonPlay.on('click',function() { 
         Q.clearStages();
-        Q.stageScene('game', 1); 
+        Q.stageScene('game'); 
       });                                
                                            
       container.fit(20);
@@ -255,7 +255,7 @@ $(function() {
    	
     
      //Q.stageScene('game');
-    Q.stageScene('startScreen', 0);
+    Q.stageScene('startScreen');
     //Q.clearStage(0);
     //Q.stageScene('game', 1);
   });
