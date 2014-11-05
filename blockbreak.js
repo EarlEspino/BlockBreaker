@@ -122,7 +122,7 @@ $(function() {
      //game scene
     Q.scene('game', new Q.Scene(function(stage) {
       //Q.clearStages();
-      //var score = 0;
+      var score = 0;
       
       /*var container = stage.insert(new Q.UI.Container({
         x: 0, y: 0, fill: "rgba(50,255,0,1)"
