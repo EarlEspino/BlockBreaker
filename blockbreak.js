@@ -143,7 +143,7 @@ $(function() {
         blockCount--;
         score++;
         if(blockCount == 0) { // WIN GAME
-          Q.audio.stop('jeopardy.mp3');
+          Q.audio.stop();
           Q.clearStages();
           //console.log(blockCount);
           Q.stageScene('winGame');
