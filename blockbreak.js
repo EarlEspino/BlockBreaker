@@ -124,14 +124,14 @@ $(function() {
       //Q.clearStages();
       var score = 0;
       
-      /*var container = stage.insert(new Q.UI.Container({
-        x: 0, y: 0, fill: "rgba(50,255,0,1)"
-        }));*/
+      var container = stage.insert(new Q.UI.Container({
+        x: 50, y: 10
+        }));
       
       
     
       
-      //stage.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
+      container.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
       	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
