@@ -136,6 +136,9 @@ $(function() {
       var ball = stage.insert(new Q.Ball());
       
       var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: " + stage.options.score, color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
+	  var livesBoard = stage.insert(new Q.UI.Text( { label: "lives: " + stage.options.lives, color: 'white', x:Q.width - 60, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
+
+
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -154,7 +157,9 @@ $(function() {
           //console.log(blockCount);
           Q.stageScene('winGame');
         }
-        
+        if( ball.p.y > Q.height) {
+          
+        }
        
         
         
