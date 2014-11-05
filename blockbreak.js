@@ -112,7 +112,8 @@ $(function() {
   });
 
 //  Q.load(['blockbreak.png','blockbreak.json'], function() {
-  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3', 'blockbreak.json'], function() {
+  Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3', 
+  		  'jeopardy.mp3','blockbreak.json'], function() {
     Q.compileSheets('blockbreak.png','blockbreak.json');  
 	/**Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
 	Q.sheet("block", "blockbreak.png", { tilew: 40, tileh: 20, sy: 20, sx: 0 });
@@ -121,23 +122,14 @@ $(function() {
     
      //game scene
     Q.scene('game', new Q.Scene(function(stage) {
+      Q.audio.play('jeopardy.mp3', {loop:true});
       //Q.clearStages();
       var score = 0;
       
-      var container = stage.insert(new Q.UI.Container({
-        x: 50, y: 10
-        }));
-      
-      
-    
-      
-      container.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
-      	
-      container.fit(20);	
-      	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
       
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: "#00FF00", x:50, y:50,  size:25 } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
