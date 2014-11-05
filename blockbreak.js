@@ -120,7 +120,7 @@ $(function() {
     
     
      //game scene
-    Q.scene('game', function(stage) {
+    Q.scene('game', new Q.Scene(function(stage) {
       var score = 0;
       
       /*var container = stage.insert(new Q.UI.Container({
@@ -132,7 +132,7 @@ $(function() {
         x: Q.width/2-3, y: Q.height/2, fill: "rgba(50,255,0,1)"
         }));
       
-      container.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#ffffff", label: "score: "} ));
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
       	
       //stage.insert(new Q.Paddle());
       //stage.insert(new Q.Ball());
@@ -159,7 +159,7 @@ $(function() {
       
       */
       
-      });
+      }));
     
     
     
