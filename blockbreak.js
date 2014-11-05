@@ -133,6 +133,8 @@ $(function() {
       
       container.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
       	
+      container.fit(20);	
+      	
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
       
