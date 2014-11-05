@@ -113,7 +113,7 @@ $(function() {
 
 //  Q.load(['blockbreak.png','blockbreak.json'], function() {
   Q.load(['blockbreak.png','paddleHit.mp3', 'blockHit.mp3', 'wallHit.mp3', 'yay.mp3',
-  		  'jeopardy.mp3','blockbreak.json'], function() {
+  		  'jeopardy.mp3','blockbreak.json', 'aww.mp3'], function() {
     Q.compileSheets('blockbreak.png','blockbreak.json');  
 	/**Q.sheet("ball", "blockbreak.png", { tilew: 20, tileh: 20, sy: 0, sx: 0 });
 	Q.sheet("block", "blockbreak.png", { tilew: 40, tileh: 20, sy: 20, sx: 0 });
@@ -143,7 +143,7 @@ $(function() {
         blockCount--;
         score++;
         if(blockCount == 0) { // WIN GAME
-          Q.audio.stop();
+          //Q.audio.stop();
           Q.clearStages();
           //console.log(blockCount);
           Q.stageScene('winGame');
@@ -202,7 +202,7 @@ $(function() {
     
     
       var buttonPlay = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#FFFFFF", 
-                                           label: "Click here to play again" }));    
+                                           label: "Click to play again" }));    
                                               
       var label = container.insert(new Q.UI.Text({ x:0, y: -10 - buttonPlay.p.h, fill: "#FF0000",
                                         label: "You win!" }));
@@ -223,7 +223,7 @@ $(function() {
       
    	//lose scene
    	Q.scene("loseGame", new Q.Scene(function(stage) {
-     Q.audio.stop('jeopardy.mp3');
+     Q.audio.play('aww.mp3');
     
    
      var container = stage.insert(new Q.UI.Container({
