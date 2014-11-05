@@ -129,8 +129,8 @@ $(function() {
       
       stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#ffffff", label: "score: "}));
       	
-      stage.insert(new Q.Paddle());
-      stage.insert(new Q.Ball());
+      //stage.insert(new Q.Paddle());
+      //stage.insert(new Q.Ball());
       
 /*
       var blockCount=0;
