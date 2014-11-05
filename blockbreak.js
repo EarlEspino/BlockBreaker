@@ -159,7 +159,22 @@ $(function() {
       }));
     
     
-    
+    //hud scene
+    Q.scene('hud', new Q.Scene(function(stage) {
+      //Q.audio.play('jeopardy.mp3', {loop:true});
+      //Q.clearStages();
+      var score = 0;
+      var lives = 3; //start with 3 lives
+      
+     
+      
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,1)', x:50, y:50,  size:12, type: 'Q.SPRITE_UI' } ));
+
+     
+       
+        
+        
+      });
     
     //start screen
      Q.scene('startScreen', new Q.Scene(function(stage) {
@@ -250,9 +265,9 @@ $(function() {
       container.fit(20);
     }));
    	
-    
+    Q.stageScene('hud');
      //Q.stageScene('game');
-    Q.stageScene('startScreen');
+    //Q.stageScene('startScreen');
     //Q.clearStage(0);
     //Q.stageScene('game', 1);
   });
