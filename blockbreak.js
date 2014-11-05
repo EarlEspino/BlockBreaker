@@ -174,7 +174,7 @@ $(function() {
        
         
         
-      });
+      }));
     
     //start screen
      Q.scene('startScreen', new Q.Scene(function(stage) {
