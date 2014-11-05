@@ -129,14 +129,14 @@ $(function() {
         }));*/
       
       
-     /*var container = stage.insert(new Q.UI.Container({
+     var container = stage.insert(new Q.UI.Container({
         x: Q.width/2-3, y: Q.height/2, fill: "rgba(50,255,0,1)"
-        }));*/
+        }));
       
       stage.insert(new Q.UI.Text( { label: "score: ", fill: "#FFFFFF", x:50, y:50,  size:25 } ));
       	
-      //stage.insert(new Q.Paddle());
-      //stage.insert(new Q.Ball());
+      stage.insert(new Q.Paddle());
+      stage.insert(new Q.Ball());
       
 /*
       var blockCount=0;
