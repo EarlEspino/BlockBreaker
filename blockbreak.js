@@ -141,7 +141,7 @@ $(function() {
       }
       stage.on('removeBlock',function() {
         blockCount--;
-        score++;
+        //score++;
         if(blockCount == 0) { // WIN GAME
           //Q.audio.stop();
           Q.clearStages();
@@ -163,12 +163,12 @@ $(function() {
     Q.scene('hud', new Q.Scene(function(stage) {
       //Q.audio.play('jeopardy.mp3', {loop:true});
       //Q.clearStages();
-      var score = 0;
-      var lives = 3; //start with 3 lives
+      //var score = 0;
+      //var lives = 3; //start with 3 lives
       
      
       
-      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,1)', 
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'white', 
       x:50, y:50,  size:12 } ));
 
      
