@@ -130,7 +130,7 @@ $(function() {
       var paddle = stage.insert(new Q.Paddle());
       var ball = stage.insert(new Q.Ball());
       
-      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,0)', x:50, y:50,  size:12 } ));
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,0)', x:50, y:50,  size:12, p.type: 'Q.SPRITE_UI' } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
