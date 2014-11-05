@@ -129,7 +129,7 @@ $(function() {
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
       
-      stage.insert(new Q.UI.Text( { label: "score: ", fill: "#00FF00", x:50, y:50,  size:25 } ));
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: "white", x:50, y:50,  size:25 } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -190,9 +190,10 @@ $(function() {
     
     //win scene
     Q.scene("winGame", new Q.Scene(function(stage) {
+     Q.audio.play('yay.mp3');
      Q.audio.stop('jeopardy.mp3');
      
-     Q.audio.play('yay.mp3');
+     
     
    
      var container = stage.insert(new Q.UI.Container({
