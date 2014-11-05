@@ -122,7 +122,7 @@ $(function() {
     
      //game scene
     Q.scene('game', new Q.Scene(function(stage) {
-      Q.audio.play('jeopardy.mp3', {loop:true});
+      //Q.audio.play('jeopardy.mp3', {loop:true});
       //Q.clearStages();
       var score = 0;
       var lives = 3; //start with 3 lives
