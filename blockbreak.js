@@ -121,6 +121,7 @@ $(function() {
     
      //game scene
     Q.scene('game', new Q.Scene(function(stage) {
+      Q.clearStages();
       //var score = 0;
       
       /*var container = stage.insert(new Q.UI.Container({
@@ -175,7 +176,7 @@ $(function() {
         }));
     
     
-      //var buttonPlay = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#999999", 
+      var buttonPlay = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#999999", 
                                            //label: "Click to Play" }));    
                                               
       var label = container.insert(new Q.UI.Text({ x:0, y: -10 - buttonPlay.p.h, fill: "#FF0000",
