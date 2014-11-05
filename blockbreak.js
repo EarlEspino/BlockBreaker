@@ -141,7 +141,8 @@ $(function() {
       }
       stage.on('removeBlock',function() {
         blockCount--;
-        scoreBoard.label = "score: ".concat(score++);
+        score++;
+        scoreBoard.label = "score: ".concat(score);
         if(blockCount == 0) { // WIN GAME
           //Q.audio.stop();
           Q.clearStages();
