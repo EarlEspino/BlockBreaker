@@ -197,9 +197,6 @@ $(function() {
     
     //win scene
     Q.scene("winGame", new Q.Scene(function(stage) {
-     
-     
-     
      Q.audio.play('yay.mp3');
     
    
