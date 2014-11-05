@@ -161,7 +161,7 @@ $(function() {
           Q.stageScene('winGame');
         }
         
-        if(ball.p.y < Q.height){
+        if(ball.p.y > Q.height){
         	if(lives == 0){
         		Q.clearStages()
         		Q.stageScene('loseGame');
