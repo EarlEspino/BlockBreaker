@@ -149,6 +149,7 @@ $(function() {
         score++;
         if(blockCount == 0) { // WIN GAME
           Q.clearStages();
+          console.log(blockCount);
           Q.stageScene('winGame');
         }
         
