@@ -168,7 +168,8 @@ $(function() {
       
      
       
-      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,1)', x:50, y:50,  size:12, type: 'Q.SPRITE_UI' } ));
+      stage.insert(new Q.UI.Text( { label: "score: ", fill: 'rgba(255,255,255,1)', 
+      x:50, y:50,  size:12 } ));
 
      
        
