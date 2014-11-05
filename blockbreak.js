@@ -76,8 +76,8 @@ $(function() {
 			p.y = 0;
 			p.dy = 1;
 		  } else if(p.y > Q.height) { //LOSE GAME
-			Q.clearStages();
-			Q.stageScene('loseGame');
+			//Q.clearStages();
+			//Q.stageScene('loseGame');
 			
 		  }
 	  });
@@ -159,6 +159,15 @@ $(function() {
           Q.clearStages();
           //console.log(blockCount);
           Q.stageScene('winGame');
+        }
+        
+        if(ball.p.y < Q.height){
+        	if(lives == 0){
+        		Q.clearStages()
+        		Q.stageScene('loseGame');
+        	} else {
+        		lives--;
+        	}
         }
         
        
