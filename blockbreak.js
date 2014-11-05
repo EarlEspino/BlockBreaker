@@ -136,7 +136,7 @@ $(function() {
       stage.insert(new Q.Paddle());
       stage.insert(new Q.Ball());
       
-/*
+
       var blockCount=0;
       for(var x=0;x<6;x++) {
         for(var y=0;y<5;y++) {
@@ -156,7 +156,7 @@ $(function() {
       });
       
       
-      */
+      
       
       }));
     
