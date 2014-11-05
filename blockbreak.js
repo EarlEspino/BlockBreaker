@@ -102,10 +102,13 @@ $(function() {
   //block
   Q.Sprite.extend("Block", {
     init: function(props) {
-      this._super(_(props).extend({ sheet: 'block'}));
+      
+      this._super(
+        _(props).extend({ sheet: 'block', score:0}));
       this.on('collision',function(ball) { 
         this.destroy();
         ball.p.dy *= -1;
+        this.p.score += 1;
         Q.stage().trigger('removeBlock');
       });
     }
@@ -127,10 +130,12 @@ $(function() {
       var score = 0;
       var lives = 3; //start with 3 lives
       
+      //Q.reset({ score: 0, lives: 2 });
+      
       var paddle = stage.insert(new Q.Paddle());
       var ball = stage.insert(new Q.Ball());
       
-      var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
+      var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: " + stage.options.score, color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -142,7 +147,7 @@ $(function() {
       stage.on('removeBlock',function() {
         blockCount--;
         score++;
-        scoreBoard.label = "score: ".concat(score);
+        
         if(blockCount == 0) { // WIN GAME
           //Q.audio.stop();
           Q.clearStages();
@@ -168,6 +173,8 @@ $(function() {
       //var score = 0;
       //var lives = 3; //start with 3 lives
       
+      
+      
      var container = stage.insert(new Q.UI.Container({
         x: Q.width/2-3, y: Q.height/2, fill: "rgba(255,255,255,1)"
         }));
@@ -186,6 +193,7 @@ $(function() {
        
       //stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",label: "score: "}));
       	
+      Q.reset({ score: 0, lives: 3 });	
     
       var container = stage.insert(new Q.UI.Container({
         x: Q.width/2-3, y: Q.height/2, fill: "rgba(255,255,255,1)"
