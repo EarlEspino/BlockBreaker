@@ -179,7 +179,7 @@ $(function() {
         
       }));
     
-    //start screen
+    //start screen			
      Q.scene('startScreen', new Q.Scene(function(stage) {
        
       //stage.insert(new Q.UI.Text( { size:25 ,x:50, y:50, fill: "#999999",label: "score: "}));
@@ -268,9 +268,9 @@ $(function() {
       container.fit(20);
     }));
    	
-    Q.stageScene('hud');
+    //Q.stageScene('hud');
      //Q.stageScene('game');
-    //Q.stageScene('startScreen');
+    Q.stageScene('startScreen');
     //Q.clearStage(0);
     //Q.stageScene('game', 1);
   });
