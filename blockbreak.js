@@ -130,7 +130,7 @@ $(function() {
       var paddle = stage.insert(new Q.Paddle());
       var ball = stage.insert(new Q.Ball());
       
-      stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
+      var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 
       var blockCount=0;
       for(var x=0;x<6;x++) {
@@ -141,7 +141,7 @@ $(function() {
       }
       stage.on('removeBlock',function() {
         blockCount--;
-        score++;
+        scoreBoard.label = "score: ".concat(score);
         if(blockCount == 0) { // WIN GAME
           //Q.audio.stop();
           Q.clearStages();
