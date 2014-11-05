@@ -177,7 +177,7 @@ $(function() {
     
     
       var buttonPlay = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#999999", 
-                                           //label: "Click to Play" }));    
+                                           label: "Click to Play" }));    
                                               
       var label = container.insert(new Q.UI.Text({ x:0, y: -10 - buttonPlay.p.h, fill: "#FF0000",
                                         label: "Block Breaker" }));
