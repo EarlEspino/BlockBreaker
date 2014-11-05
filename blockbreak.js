@@ -76,8 +76,8 @@ $(function() {
 			p.y = 0;
 			p.dy = 1;
 		  } else if(p.y > Q.height) { //LOSE GAME
-			Q.clearStages();
-			Q.stageScene('loseGame');
+			/*Q.clearStages();
+			Q.stageScene('loseGame');*/
 			
 		  }
 	  });
@@ -125,9 +125,10 @@ $(function() {
       Q.audio.play('jeopardy.mp3', {loop:true});
       //Q.clearStages();
       var score = 0;
+      var lives = 3; //start with 3 lives
       
-      stage.insert(new Q.Paddle());
-      stage.insert(new Q.Ball());
+      var paddle = stage.insert(new Q.Paddle());
+      var ball = stage.insert(new Q.Ball());
       
       stage.insert(new Q.UI.Text( { label: "score: ", fill: "white", x:50, y:50,  size:25 } ));
 
@@ -142,9 +143,15 @@ $(function() {
         blockCount--;
         score++;
         if(blockCount == 0) { // WIN GAME
+          Q.audio.stop('jeopardy.mp3');
           Q.clearStages();
           //console.log(blockCount);
           Q.stageScene('winGame');
+        }
+        if(ball.p.y > Q.height){
+        	
+        	Q.clearStages();
+			Q.stageScene('loseGame');
         }
         
         
@@ -190,10 +197,10 @@ $(function() {
     
     //win scene
     Q.scene("winGame", new Q.Scene(function(stage) {
+     
+     
+     
      Q.audio.play('yay.mp3');
-     Q.audio.stop('jeopardy.mp3');
-     
-     
     
    
      var container = stage.insert(new Q.UI.Container({
