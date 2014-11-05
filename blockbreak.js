@@ -148,10 +148,7 @@ $(function() {
           //console.log(blockCount);
           Q.stageScene('winGame');
         }
-        if(ball.p.y > Q.height){
-        	
-        	
-        }
+       
         
         
       });
