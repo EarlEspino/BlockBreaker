@@ -151,7 +151,7 @@ $(function() {
         score++;
         if(blockCount == 0) { // WIN GAME
           Q.clearStages();
-          console.log(blockCount);
+          //console.log(blockCount);
           Q.stageScene('winGame');
         }
         
@@ -207,7 +207,7 @@ $(function() {
     
     
       var buttonPlay = container.insert(new Q.UI.Button({ x: 0, y: 0, fill: "#FFFFFF", 
-                                           label: "Go to next level" }));    
+                                           label: "Click here to play again" }));    
                                               
       var label = container.insert(new Q.UI.Text({ x:0, y: -10 - buttonPlay.p.h, fill: "#FF0000",
                                         label: "You win!" }));
