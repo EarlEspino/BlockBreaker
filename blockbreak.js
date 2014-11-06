@@ -48,6 +48,7 @@ $(function() {
         speed: 200,
         dx: 1,
         dy: -1,
+        lives: 0;
       });
       this.p.y = Q.height / 2 - this.p.h;
       this.p.x = Q.width / 2 + this.p.w / 2;
@@ -140,9 +141,9 @@ $(function() {
 
 	  if(ball.p.y > Q.height){
         lives--;
-        lives
+        
         ball.destroy();
-        ball = stage.insert(new Q.Ball());
+        var ball2 = stage.insert(new Q.Ball());
         	
         	if(lives == 0){
         		Q.clearStages();
