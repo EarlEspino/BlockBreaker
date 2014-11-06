@@ -80,8 +80,8 @@ $(function() {
 			this.p.lives -= 1;
 			
 			  if(lives == 0){
-			    Q.clearStages();
-				Q.stageScene('loseGame');
+			  	this.destroy();
+			    Q.stage().trigger('addBall');
 			  }
 		  }
 	  });
@@ -175,11 +175,22 @@ $(function() {
           //console.log(blockCount);
           Q.stageScene('winGame');
         }
-        
+          
         
        
         
         
+      });
+      
+      stage.on('addBall',function() {
+        livesBoard.destroy();
+        lives--;
+        ball = stage.insert(new Q.Ball());
+        
+        livesBoard = stage.insert(new Q.UI.Text( { label: "lives: ".concat(lives), color: 'white', x:Q.width - 35, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
+      
+      
+      
       });
       
       
