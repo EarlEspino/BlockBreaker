@@ -79,7 +79,7 @@ $(function() {
 		  } else if(p.y > Q.height) { //LOSE GAME
 			this.p.lives -= 1;
 			
-			  if(lives == 0){
+			  if(this.p.lives == 0){
 			  	this.destroy();
 			    Q.stage().trigger('addBall');
 			  }
