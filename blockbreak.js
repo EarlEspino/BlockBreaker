@@ -171,7 +171,7 @@ $(function() {
         
         scoreBoard = stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
         
-        if(blockCount == 0) { // WIN GAME
+        if(blockCount === 0) { // WIN GAME
           //Q.audio.stop();
           Q.clearStages();
           //console.log(blockCount);
