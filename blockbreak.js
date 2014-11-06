@@ -82,6 +82,9 @@ $(function() {
 			  if(this.p.lives == 0){
 			  	this.destroy();
 			    Q.stage().trigger('addBall');
+			    
+			    Q.clearStages();
+        		Q.stageScene('loseGame');
 			  }
 		  }
 	  });
@@ -188,7 +191,7 @@ $(function() {
         ball = stage.insert(new Q.Ball());
         
         livesBoard = stage.insert(new Q.UI.Text( { label: "lives: ".concat(lives), color: 'white', x:Q.width - 35, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
-      
+      	
       
       
       });
