@@ -48,7 +48,7 @@ $(function() {
         speed: 200,
         dx: 1,
         dy: -1,
-        lives: 0;
+        lives: 3
       });
       this.p.y = Q.height / 2 - this.p.h;
       this.p.x = Q.width / 2 + this.p.w / 2;
@@ -77,9 +77,12 @@ $(function() {
 			p.y = 0;
 			p.dy = 1;
 		  } else if(p.y > Q.height) { //LOSE GAME
-			//Q.clearStages();
-			//Q.stageScene('loseGame');
+			this.p.lives -= 1;
 			
+			  if(lives == 0){
+			    Q.clearStages();
+				Q.stageScene('loseGame');
+			  }
 		  }
 	  });
     },
@@ -139,7 +142,7 @@ $(function() {
       var scoreBoard = stage.insert(new Q.UI.Text( { label: "score: ".concat(score), color: 'white', x:40, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 	  var livesBoard = stage.insert(new Q.UI.Text( { label: "lives: ".concat(lives), color: 'white', x:Q.width - 35, y:15,  size:16, type: 'Q.SPRITE_UI' } ));
 
-	  if(ball.p.y > Q.height){
+	  /*if(ball.p.y > Q.height){
         lives--;
         
         ball.destroy();
@@ -149,7 +152,7 @@ $(function() {
         		Q.clearStages();
         		Q.stageScene('loseGame');
         	} 
-        }
+        }*/
         
 
       var blockCount=0;
